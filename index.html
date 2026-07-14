@@ -3,249 +3,341 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Company | Welcome</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>National Juneteenth Pageant | Celebrating Excellence, Leadership & Legacy</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    color:#333;
-    background:#f8f9fc;
-    line-height:1.6;
+font-family:'Poppins',sans-serif;
+background:#faf9f6;
+color:#222;
+line-height:1.6;
+}
+
+/* Navigation */
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(15,15,15,.92);
+backdrop-filter:blur(10px);
+z-index:1000;
 }
 
 .container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-header{
-    background:white;
-    position:sticky;
-    top:0;
-    z-index:999;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
+width:90%;
+max-width:1300px;
+margin:auto;
 }
 
 nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
 }
 
 .logo{
-    font-size:28px;
-    font-weight:700;
-    color:#5a2ca0;
+font-family:'Cinzel',serif;
+font-size:28px;
+font-weight:bold;
+color:#D4AF37;
+letter-spacing:2px;
 }
 
 nav ul{
-    list-style:none;
-    display:flex;
-    gap:30px;
+display:flex;
+list-style:none;
+gap:35px;
 }
 
 nav a{
-    text-decoration:none;
-    color:#333;
-    font-weight:500;
-    transition:.3s;
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
 }
 
 nav a:hover{
-    color:#5a2ca0;
+color:#D4AF37;
 }
+
+/* Hero */
 
 .hero{
-    height:90vh;
-    background:linear-gradient(135deg,#6f42c1,#4e73df);
-    color:white;
-    display:flex;
-    align-items:center;
-    text-align:center;
-}
-
-.hero-content{
-    width:100%;
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
+url("https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=1800&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:0 20px;
 }
 
 .hero h1{
-    font-size:60px;
-    margin-bottom:20px;
+font-family:'Cinzel',serif;
+font-size:64px;
+line-height:1.2;
+margin-bottom:20px;
 }
 
 .hero p{
-    font-size:22px;
-    margin-bottom:35px;
+font-size:22px;
+max-width:800px;
+margin:auto;
+margin-bottom:35px;
 }
 
-.btn{
-    display:inline-block;
-    background:white;
-    color:#5a2ca0;
-    padding:15px 35px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
+.button{
+display:inline-block;
+padding:16px 38px;
+background:#D4AF37;
+color:black;
+font-weight:600;
+text-decoration:none;
+border-radius:50px;
+transition:.3s;
+margin:10px;
 }
 
-.btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 10px 20px rgba(0,0,0,.2);
+.button:hover{
+transform:translateY(-4px);
+background:white;
 }
+
+.button-outline{
+background:transparent;
+border:2px solid white;
+color:white;
+}
+
+.button-outline:hover{
+background:white;
+color:black;
+}
+
+/* Sections */
 
 section{
-    padding:80px 0;
+padding:90px 0;
 }
 
 .section-title{
-    text-align:center;
-    font-size:40px;
-    margin-bottom:20px;
-    color:#5a2ca0;
+font-family:'Cinzel',serif;
+font-size:42px;
+text-align:center;
+margin-bottom:15px;
+color:#7B1113;
 }
 
-.section-subtitle{
-    text-align:center;
-    color:#777;
-    margin-bottom:50px;
+.subtitle{
+text-align:center;
+max-width:750px;
+margin:auto;
+margin-bottom:60px;
+color:#666;
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:white;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-.card h3{
-    margin-bottom:15px;
-    color:#5a2ca0;
-}
+/* About */
 
 .about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:50px;
+align-items:center;
 }
 
 .about img{
-    width:100%;
-    border-radius:15px;
+width:100%;
+border-radius:18px;
+box-shadow:0 20px 50px rgba(0,0,0,.18);
 }
 
 .about h2{
-    color:#5a2ca0;
-    margin-bottom:20px;
+font-family:'Cinzel',serif;
+font-size:36px;
+margin-bottom:20px;
+color:#7B1113;
 }
 
+/* Cards */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:40px;
+border-radius:18px;
+box-shadow:0 12px 35px rgba(0,0,0,.08);
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+color:#7B1113;
+margin-bottom:15px;
+}
+
+/* Stats */
+
+.stats{
+background:#111;
+color:white;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.stat h2{
+font-size:52px;
+color:#D4AF37;
+}
+
+.stat p{
+font-size:18px;
+}
+
+/* CTA */
+
 .cta{
-    background:#5a2ca0;
-    color:white;
-    text-align:center;
+background:linear-gradient(135deg,#7B1113,#2b0000);
+color:white;
+text-align:center;
 }
 
 .cta h2{
-    font-size:40px;
-    margin-bottom:20px;
+font-family:'Cinzel',serif;
+font-size:46px;
+margin-bottom:20px;
 }
 
-.contact{
-    text-align:center;
+.cta p{
+max-width:700px;
+margin:auto;
+margin-bottom:35px;
 }
 
-.contact p{
-    margin:10px 0;
-}
+/* Footer */
 
 footer{
-    background:#222;
-    color:#bbb;
-    text-align:center;
-    padding:30px;
+background:#111;
+color:#aaa;
+text-align:center;
+padding:35px;
+}
+
+.socials{
+margin-top:20px;
+font-size:28px;
+}
+
+.socials span{
+margin:0 10px;
 }
 
 @media(max-width:768px){
 
 .hero h1{
-    font-size:40px;
+font-size:42px;
 }
 
 .hero p{
-    font-size:18px;
-}
-
-.about{
-    grid-template-columns:1fr;
+font-size:18px;
 }
 
 nav{
-    flex-direction:column;
+flex-direction:column;
 }
 
 nav ul{
-    margin-top:20px;
-    flex-wrap:wrap;
-    justify-content:center;
+margin-top:20px;
+flex-wrap:wrap;
+justify-content:center;
 }
 
 }
 
 </style>
 </head>
+
 <body>
 
 <header>
+
 <div class="container">
 
 <nav>
 
-<div class="logo">YOUR LOGO</div>
+<div class="logo">
+National Juneteenth Pageant
+</div>
 
 <ul>
-<li><a href="#">Home</a></li>
+
 <li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
+<li><a href="#program">Program</a></li>
+<li><a href="#impact">Impact</a></li>
 <li><a href="#contact">Contact</a></li>
+
 </ul>
 
 </nav>
 
 </div>
+
 </header>
 
 <section class="hero">
 
-<div class="container hero-content">
+<div>
 
-<h1>Build Something Amazing</h1>
+<h1>
+Celebrating Freedom.<br>
+Honoring Heritage.<br>
+Crowning Tomorrow's Leaders.
+</h1>
 
-<p>Create a modern online presence that grows your business.</p>
+<p>
 
-<a href="#contact" class="btn">Get Started</a>
+The National Juneteenth Pageant empowers young women through leadership,
+scholarship, community service, cultural excellence, and the enduring
+legacy of Juneteenth.
+
+</p>
+
+<a href="#" class="button">Apply Today</a>
+
+<a href="#" class="button button-outline">Become a Sponsor</a>
 
 </div>
 
@@ -258,24 +350,32 @@ nav ul{
 <div class="about">
 
 <div>
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900" alt="">
+
+<img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=80">
+
 </div>
 
 <div>
 
-<h2>About Us</h2>
+<h2>Our Mission</h2>
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
-felis eget lorem suscipit ultricies. Donec ut libero vitae ipsum
-interdum placerat.
+
+The National Juneteenth Pageant exists to celebrate the history of
+Juneteenth while developing confident, educated, and service-minded
+young women who are prepared to become tomorrow's leaders.
+
 </p>
 
 <br>
 
 <p>
-Our mission is to create beautiful digital experiences that help
-organizations connect with people and achieve their goals.
+
+Contestants participate in leadership development, community service,
+interviews, talent presentations, public speaking, cultural awareness,
+and scholarship opportunities while proudly representing their
+communities across the nation.
+
 </p>
 
 </div>
@@ -286,38 +386,117 @@ organizations connect with people and achieve their goals.
 
 </section>
 
-<section id="services">
+<section id="program">
 
 <div class="container">
 
-<h2 class="section-title">Our Services</h2>
+<h2 class="section-title">
+What We Celebrate
+</h2>
 
-<p class="section-subtitle">
-Everything you need to launch your next project.
+<p class="subtitle">
+
+More than a pageant — a leadership experience rooted in culture,
+education, service, and excellence.
+
 </p>
 
-<div class="grid">
+<div class="cards">
 
 <div class="card">
-<h3>💻 Web Design</h3>
+
+<h3>👑 Leadership</h3>
+
 <p>
-Modern, responsive websites designed to impress visitors and convert
-customers.
+
+Develop confident leaders through mentorship, public speaking,
+professional development, and civic engagement.
+
 </p>
+
 </div>
 
 <div class="card">
-<h3>🚀 Marketing</h3>
+
+<h3>📚 Scholarship</h3>
+
 <p>
-Grow your audience with effective digital marketing strategies.
+
+Encourage academic achievement while providing scholarship
+opportunities for participants nationwide.
+
 </p>
+
 </div>
 
 <div class="card">
-<h3>📱 Mobile Friendly</h3>
+
+<h3>❤️ Community Service</h3>
+
 <p>
-Optimized for every device so your visitors have the best experience.
+
+Promote volunteerism and meaningful community impact through
+service initiatives and outreach.
+
 </p>
+
+</div>
+
+<div class="card">
+
+<h3>🎭 Cultural Excellence</h3>
+
+<p>
+
+Celebrate African American history, culture, creativity,
+achievement, and the significance of Juneteenth.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="stats" id="impact">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat">
+
+<h2>50</h2>
+
+<p>States Represented</p>
+
+</div>
+
+<div class="stat">
+
+<h2>500+</h2>
+
+<p>Future Leaders</p>
+
+</div>
+
+<div class="stat">
+
+<h2>$100K+</h2>
+
+<p>Scholarships Awarded</p>
+
+</div>
+
+<div class="stat">
+
+<h2>1</h2>
+
+<p>National Crown</p>
+
 </div>
 
 </div>
@@ -330,16 +509,23 @@ Optimized for every device so your visitors have the best experience.
 
 <div class="container">
 
-<h2>Ready to Get Started?</h2>
+<h2>
+Join the Movement
+</h2>
 
 <p>
-Let's build something incredible together.
+
+Become part of a national celebration that inspires leadership,
+preserves history, and empowers the next generation.
+
 </p>
 
-<br>
+<a href="#" class="button">
+Register
+</a>
 
-<a href="#contact" class="btn">
-Contact Us
+<a href="#" class="button button-outline">
+Sponsor the Pageant
 </a>
 
 </div>
@@ -348,21 +534,42 @@ Contact Us
 
 <section id="contact">
 
-<div class="container contact">
+<div class="container">
 
-<h2 class="section-title">Contact</h2>
+<h2 class="section-title">
+Contact Us
+</h2>
 
-<p>Email: info@example.com</p>
+<p style="text-align:center;font-size:18px;">
 
-<p>Phone: (555) 555-5555</p>
+National Juneteenth Pageant<br><br>
 
-<p>123 Main Street, Your City</p>
+Email:
+info@nationaljuneteenthpageant.org
 
-<br>
+<br><br>
 
-<a href="mailto:info@example.com" class="btn">
-Send Email
-</a>
+Phone:
+(800) 555-2026
+
+<br><br>
+
+Follow us for updates, contestant announcements,
+scholarship opportunities, and national events.
+
+</p>
+
+<div class="socials" style="text-align:center;">
+
+<span>📘</span>
+
+<span>📷</span>
+
+<span>▶️</span>
+
+<span>🎵</span>
+
+</div>
 
 </div>
 
@@ -370,9 +577,7 @@ Send Email
 
 <footer>
 
-<p>
-© 2026 Your Company. All Rights Reserved.
-</p>
+© 2026 National Juneteenth Pageant • Celebrating Freedom • Inspiring Leadership • Building Legacy
 
 </footer>
 
